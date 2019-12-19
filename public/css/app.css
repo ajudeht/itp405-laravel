@@ -1,0 +1,70 @@
+body{
+  background-color: white;
+  background-color: white;
+  font-family: "Inter" !important;
+  letter-spacing: -.02em;
+}
+
+table td{
+  vertical-align: middle !important;
+}
+
+.table-container{
+  width: 100%;
+}
+
+.table-tag{
+  margin: 4px !important;
+  font-weight: 600;
+}
+
+.nav-main{
+  background-color: black !important;
+  justify-content: center;
+}
+
+.logo-main{
+  color: black !important;
+  font-weight: 600;
+}
+
+.header-nav{
+  border-bottom: 1px solid silver;
+
+}
+
+.header-sec{
+  background-color: #e5edef;
+      border-radius: 0 0px 8px 8px;
+  }
+
+table{
+  font-family:
+}
+
+.label-error{
+    margin-top: 7px;
+    width: 100%;
+}
+
+.field.is-danger .button{
+  border: 1px solid #f14668
+}
+
+.tags.genre-array{
+  margin: .25em !important;
+}
+
+.icon-error{
+  font-size: 1.3em !important;
+  position: relative !important;
+  bottom: -4px !important;
+  color: #cc0f35 !important;
+}
+.control.tagField input{
+display: none;
+}
+.control.tagField input:checked ~ .button {
+  background-color: black !important;
+  color: white;
+}
