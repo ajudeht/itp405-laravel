@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['customHeader' => true])
 
 @section('title', 'Edit Genre')
 
@@ -7,6 +7,10 @@
 @endsection
 
 @section('content')
+<h1 class="subtitle is-3">Edit Genre</h1>
+<div class="box form-box">
+
+<section class="login-header narrow"></section>
 <form action="./post" >
 
       <input name="id" type="hidden" value="{{$genre->GenreId}}"/>
@@ -33,5 +37,6 @@
 
 
 </form>
+</div>
 
 @endsection

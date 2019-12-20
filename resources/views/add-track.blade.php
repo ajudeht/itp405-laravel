@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['customHeader' => true])
 
 @section('title', 'Add Track')
 
@@ -7,7 +7,12 @@
 @endsection
 
 @section('content')
+  <h1 class="subtitle is-3">Add Track</h1>
+<div class="box form-box">
+
+  <section class="login-header narrow"></section>
 <form action="./post" style="max-width: 1200px;">
+
   <div class="columns">
     <div class="column is-one-half" style="padding-right: 3em;">
 
@@ -50,7 +55,7 @@
 </div>
 
 
-      <labelclass="label">Price</label>
+      <label class="label">Price</label>
     <div class="field has-addons">
     <p class="control">
       <a class="button is-static" style="font-size: 1.5em;">
@@ -126,5 +131,6 @@
   </p>
 </div>
 </form>
+</div>
 
 @endsection

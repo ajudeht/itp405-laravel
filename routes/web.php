@@ -13,11 +13,21 @@
 
 Route::get('/', function () {
     return view('welcome');
+})->middleware('maintenance');
+
+Route::get('genres', 'GenresController@index')->middleware('maintenance');
+Route::get('genres/{id}/edit', 'GenresController@editGenreForm')->middleware('maintenance');
+Route::get('genres/{id}/post', 'GenresController@editGenre')->middleware('maintenance');
+Route::get('tracks', 'TracksController@index')->middleware('maintenance');
+Route::get('tracks/new', 'TracksController@addTrackForm')->middleware('maintenance');
+Route::get('tracks/post', 'TracksController@addTrack')->middleware('maintenance');
+Route::get('logout', 'Auth\LoginController@logout');
+Route::get('maintenance', function () {
+    return view('maintenance');;
 });
 
-Route::get('genres', 'GenresController@index');
-Route::get('genres/{id}/edit', 'GenresController@editGenreForm');
-Route::get('genres/{id}/post', 'GenresController@editGenre');
-Route::get('tracks', 'TracksController@index');
-Route::get('tracks/new', 'TracksController@addTrackForm');
-Route::get('tracks/post', 'TracksController@addTrack');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('maintenance');
+Route::get('/settings', 'HomeController@settings');
+Route::get('/settings/post', 'HomeController@postSettings');
