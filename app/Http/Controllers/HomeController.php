@@ -31,7 +31,6 @@ class HomeController extends Controller
     {
       $mm = DB::table('configurations')->where('name', '=', 'maintenance')->first();
 
-
         return view('settings', ['mmIsActive'=>($mm->value == "on")?true:false]);
     }
 

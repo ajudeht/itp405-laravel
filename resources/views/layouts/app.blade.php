@@ -7,7 +7,6 @@
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
           <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
         <title>ITP405 - @yield('title')</title>
     </head>
     <body>

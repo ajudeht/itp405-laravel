@@ -25,6 +25,9 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('maintenance', function () {
     return view('maintenance');;
 });
+Route::get('docs', function () {
+    return view('docs');;
+});
 
 Auth::routes();
 
